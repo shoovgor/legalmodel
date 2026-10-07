@@ -1,0 +1,14 @@
+﻿column,n_missing,pct_missing,n_present
+source_file,0,0.0,5153
+case_id,0,0.0,5153
+decision_date,0,0.0,5153
+court,0,0.0,5153
+judge,0,0.0,5153
+dispute_type,0,0.0,5153
+plaintiff_type,309,6.0,4844
+defendant_type,367,7.1,4786
+claim_amount_requested,1334,25.9,3819
+law_articles,775,15.0,4378
+case_narrative,1145,22.2,4008
+civil_outcome,0,0.0,5153
+civil_award_amount,3535,68.6,1618

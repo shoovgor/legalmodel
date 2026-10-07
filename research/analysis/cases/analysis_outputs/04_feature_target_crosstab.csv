@@ -1,0 +1,14 @@
+﻿signal,denied,granted,granted_uncontested,partial,settled,withdrawn,overall
+has_interest_rate,0.633,0.54,0.503,0.696,0.536,0.512,0.55
+has_institutional_lender,0.275,0.479,0.646,0.315,0.449,0.517,0.474
+has_app_lending,0.0,0.094,0.062,0.007,0.036,0.088,0.071
+has_collateral,0.167,0.09,0.039,0.291,0.13,0.072,0.11
+has_guarantor,0.025,0.015,0.017,0.026,0.013,0.005,0.015
+has_gov_fund,0.067,0.017,0.025,0.033,0.023,0.008,0.02
+has_uncontested,0.442,0.51,0.58,0.448,0.5,0.109,0.478
+has_settlement,0.017,0.015,0.012,0.039,0.479,0.029,0.093
+has_withdrawal,0.192,0.07,0.046,0.237,0.222,0.65,0.152
+has_opposition,0.1,0.024,0.019,0.076,0.054,0.483,0.069
+has_evidence_dispute,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+has_default,0.067,0.01,0.002,0.05,0.006,0.005,0.013
+has_multiple_claims,0.0,0.0,0.0,0.013,0.0,0.0,0.001

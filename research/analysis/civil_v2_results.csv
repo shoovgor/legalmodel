@@ -1,0 +1,11 @@
+﻿source_file,case_id,court,dispute_category,specific_dispute_details,plaintiff_type,defendant_type,initial_claim_amount,final_awarded_amount,is_settled_by_agreement,defendant_admitted_fault,case_complexity_flags,parse_warnings
+192_ШШ2026_06376.txt,192/ШШ2026/06376,"Баянгол, Хан-Уул, Сонгинохайрхан дүүргийн Иргэний хэргийн анхан шатны тойргийн шүүх",Contract/Service,Dispute over execution of work,Corporate,Corporate,2162600.0,,True,True,,award_redacted
+137_ШШ2026_00464.txt,137/ШШ2026/00464,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Debt from app-based electronic loan (Alpha store),Corporate,Individual,2134484.0,2134484.0,True,True,,
+137_ШШ2026_00465.txt,137/ШШ2026/00465,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Debt from app-based electronic loan (Clouddy electronics),Corporate,Individual,4400537.0,4400537.0,True,True,,
+137_ШШ2026_00466.txt,137/ШШ2026/00466,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Debt from electronic salary loan,Corporate,Individual,24624907.0,24624907.0,True,True,,
+137_ШШ2026_00467.txt,137/ШШ2026/00467,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Debt from herder loan (livestock/ger collateral),Corporate,Individual,28683474.34,28683474.34,True,True,Multiple defendants,
+137_ШШ2026_00468.txt,137/ШШ2026/00468,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Personal loan for truck purchase/profit sharing,Individual,Individual,17459450.0,14459450.0,True,True,Plaintiff reduced initial claim,
+137_ШШ2026_00469.txt,137/ШШ2026/00469,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Debt from electronic salary loan,Corporate,Individual,11664982.0,11664982.0,True,True,,
+137_ШШ2026_00470.txt,137/ШШ2026/00470,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Debt from electronic salary loan,Corporate,Individual,22916998.0,22916998.0,True,True,,
+137_ШШ2026_00471.txt,137/ШШ2026/00471,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Loan/Debt,Debt from online salary loan,Corporate,Individual,9877064.89,9877064.89,True,True,,
+137_ШШ2026_00472.txt,137/ШШ2026/00472,Дорноговь аймгийн Замын-Үүд сум дахь сум дундын шүүх,Administrative/Employment,Establishment of years worked for pension,Individual,None,,,,False,Requires archive and witness verification,

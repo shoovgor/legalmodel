@@ -1,0 +1,11 @@
+﻿metric,value
+total_rows,8200
+rows_first_instance,5350
+rows_appellate,2255
+rows_supervisory,595
+first_instance_labeled,5153
+appellate_supervisory_labeled,2814
+n_columns,19
+n_unique_judges,311
+n_unique_courts,46
+n_classes,6

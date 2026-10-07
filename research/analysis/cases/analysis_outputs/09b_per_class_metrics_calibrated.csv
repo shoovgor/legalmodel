@@ -1,0 +1,10 @@
+﻿,precision,recall,f1-score,support
+denied,0.0,0.0,0.0,120.0
+granted,0.699,0.972,0.814,2885.0
+granted_uncontested,0.994,0.358,0.527,483.0
+partial,0.645,0.241,0.351,460.0
+settled,0.887,0.626,0.734,828.0
+withdrawn,0.934,0.525,0.672,377.0
+accuracy,0.738,0.738,0.738,0.738
+macro avg,0.693,0.454,0.516,5153.0
+weighted avg,0.753,0.738,0.703,5153.0

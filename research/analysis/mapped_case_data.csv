@@ -1,0 +1,6 @@
+﻿case_id,article_code,chapter,part,crime_name_mn,crime_name_en
+Case_A_001,17.1.1,Unknown,Unknown,Needs Translation,Needs Translation
+Case_B_002,10.6.1,10,special,Хууль/гэрээгээр хүлээсэн үүргээ биелүүлээгүйн улмаас хүний амь нас хохироосон,Death caused by failure to fulfil a legal/contractual/administrative duty (negligence)
+Case_B_002,6.7.1,6,general,Ялаас чөлөөлөх / хөнгөрүүлэх журам,General-part rule on mitigating/reducing sentences
+Case_C_003,25.3.1,25,special,Соёлын биет өвийг завших,Misappropriation of tangible cultural heritage
+Case_C_003,25.5.1,25,special,Соёлын биет өвийн худалдааг хууль бусаар явуулах /завдах/,Illegal trade (or attempted illegal trade) of tangible cultural heritage

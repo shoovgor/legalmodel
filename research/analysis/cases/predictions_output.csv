@@ -1,0 +1,4 @@
+﻿source_file,case_id,case_level,dispute_type,court,judge,plaintiff_type,defendant_type,court_type,claim_amount,has_narrative,predicted_outcome,predicted_probability,all_probabilities,parse_warnings,skip_reason
+139_ШШ2020_00529.txt,,,,,,,,urban,,True,granted,76.2,granted: 76.2% | granted_uncontested: 12.7% | withdrawn: 4.6% | partial: 3.1% | denied: 1.9% | settled: 1.4%,,
+183_ШШ2020_01985.txt,,,,,,,,urban,,True,granted,55.4,granted: 55.4% | partial: 32.3% | denied: 5.5% | granted_uncontested: 3.3% | settled: 2.4% | withdrawn: 1.0%,,
+310_ШШ2026_00544.txt,,,,,,,,urban,,True,granted,56.5,granted: 56.5% | partial: 17.0% | granted_uncontested: 14.0% | settled: 10.2% | denied: 1.8% | withdrawn: 0.4%,,

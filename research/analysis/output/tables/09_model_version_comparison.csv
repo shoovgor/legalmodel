@@ -1,0 +1,6 @@
+version,dataset_size,new_features,algorithm,macro_f1,notes
+v1-v6,1168,Baseline,Various,0.82,Suffered from target leakage in reasoning sections
+v7,4309,"Regex Signals, Section parsing",RandomForest,0.58,Leakage fixed by extracting only 'ТОДОРХОЙЛОХ' section
+v8,4309,TF-IDF 1000,HistGBM,0.64,Introduction of gradient boosting
+v9 (Current),5153,Full pipeline,HistGBM (Uncalibrated),0.639,Reproduced on updated larger dataset
+v9 (Current),5153,Full pipeline,HistGBM (Calibrated),0.516,Sigmoid calibration smooths minority classes heavily

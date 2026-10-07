@@ -1,0 +1,6 @@
+Parameter 1,Parameter 2,Interaction
+TF-IDF max_features,HistGBM max_depth,Higher vocab size requires deeper trees to capture interactions.
+HistGBM learning_rate,HistGBM max_iter,Lower learning rate requires higher max_iter to converge.
+Appellate Scaling,Logistic Regression Penalty,"StandardScaler shrinks dummy vars, drastically altering the L2 penalty effect and Odds Ratios."
+Calibration Method,Precision Thresholds,Changing calibration from sigmoid to isotonic will invalidate all hardcoded precision thresholds.
+TF-IDF ngram_range,TF-IDF min_df,"Adding bigrams (1,2) drastically increases vocab; min_df must be tuned together to prevent noise."

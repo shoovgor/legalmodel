@@ -1,0 +1,7 @@
+metric,value
+total_cases_in_raw_dataset,8200
+first_instance_labeled_cases,5153
+unique_courts_fi,46
+unique_judges_fi,311
+date_min,2019-04-24
+date_max,2026-12-26

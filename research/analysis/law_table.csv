@@ -1,0 +1,9 @@
+article_code,chapter,part,crime_name_mn,crime_name_en,source_case,notes
+10.1.1,10,special,Хүнийг алах,Murder / intentional killing,case_I,"Confirmed via legalinfo.mn and criminology.mn. Chapter 10 = crimes against life."
+10.6.1,10,special,"Хууль/гэрээгээр хүлээсэн үүргээ биелүүлээгүйн улмаас хүний амь нас хохироосон","Death caused by failure to fulfil a legal/contractual/administrative duty (negligence)",case_H,"Definition taken directly from case_H's own verdict text, not yet cross-checked against the statute directly - worth verifying on legalinfo.mn."
+25.3.1,25,special,Соёлын биет өвийг завших,Misappropriation of tangible cultural heritage,case_2026_SHTST_296,"Stated explicitly in your original project brief."
+25.5.1,25,special,Соёлын биет өвийн худалдааг хууль бусаар явуулах /завдах/,Illegal trade (or attempted illegal trade) of tangible cultural heritage,"case_2026_SHTST_296, case_B","Appears in both a completed-trade case and an attempted-trade (завдсан) case - the narrative distinguishes completed vs. attempted, the article code alone doesn't."
+2.8.1,2,general,Эрүүгийн хариуцлагын зарчим / журам (тодорхой бус - баталгаажуулах шаардлагатай),General-part procedural article cited alongside almost every charge,"case_2026_SHTST_296, case_B, case_H","General part - NOT a crime definition. Cited routinely as a sentencing-procedure reference, not informative about the crime itself."
+6.7.1,6,general,Ялаас чөлөөлөх / хөнгөрүүлэх журам,General-part rule on mitigating/reducing sentences,case_H,"General part - sentencing discretion rule, not a crime."
+7.1.1,7,general,Тэнсэх (хорих ял оногдуулахгүйгээр тэнсэх) журам,General-part rule on suspended sentences,case_H,"General part - explains *how* a suspended sentence works procedurally."
+7.3.1,7,general,Тэнссэн хугацаанд тогтоох хязгаарлалт,General-part rule on restrictions during a suspended-sentence period,case_H,"General part."

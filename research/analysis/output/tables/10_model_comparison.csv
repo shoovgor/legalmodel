@@ -1,0 +1,6 @@
+﻿model,macro_f1,accuracy,weighted_f1
+naive_baseline,0.12,0.56,0.402
+logistic_regression,0.548,0.658,0.673
+random_forest,0.592,0.751,0.74
+histgbm,0.639,0.768,0.767
+calibrated_histgbm,0.516,0.738,0.703

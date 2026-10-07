@@ -1,0 +1,9 @@
+Name,Group,Current Value,Is Fixed/Default,Notes
+Target Variable,Dataset,civil_outcome (6 classes),Fixed,The core supervised target.
+Appellate Target Variable,Dataset,upheld (Binary),Fixed,Target for appellate regression.
+CV Folds (Outer),Cross-Validation,5,Fixed,StratifiedKFold(n_splits=5) used for reporting.
+CV Shuffle,Cross-Validation,True,Fixed,Ensures random distribution.
+CV Random State,Cross-Validation,42,Fixed,Standard seed.
+CalibratedClassifierCV inner folds,Cross-Validation,"5 (train), 3 (eval)",Fixed,Inconsistent inner CV for Platt Scaling.
+Text Imputation,Preprocessing,Empty String (''),Fixed,NaNs filled with blank strings before TF-IDF.
+Primary Metric,Evaluation,macro-F1,Fixed,Main evaluation metric.

@@ -1,0 +1,6 @@
+feature_name,feature_group,data_type,transformation,description,available_before_prediction,potential_leakage_risk
+claim_amount_requested,numerical,float,"log1p, median imputation",Original claim amount requested by plaintiff,Yes,Low
+judge,categorical,string,frequency encoding (judge_case_count),Name of the judge,Yes,None
+plaintiff_type,categorical,string,OneHotEncoding,"Type of plaintiff (e.g. individual, company)",Yes,None
+has_settlement,binary/text-signal,int,Regex match in narrative,Flags presence of settlement-related words,Yes,Medium (requires strictly filtering out court reasoning)
+TF-IDF Terms,TF-IDF,float,TfidfVectorizer(max_features=1000),Word n-grams from the plaintiff petition section only,Yes,Low (if parsing is perfect)

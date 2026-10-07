@@ -1,0 +1,38 @@
+Name,Group,Current Value,Is Fixed/Default,Notes
+Target Variable,Dataset,civil_outcome (6 classes),Fixed,The core supervised target.
+Appellate Target Variable,Dataset,upheld (Binary),Fixed,Target for appellate regression.
+CV Folds (Outer),Cross-Validation,5,Fixed,StratifiedKFold(n_splits=5) used for reporting.
+CV Shuffle,Cross-Validation,True,Fixed,Ensures random distribution.
+CV Random State,Cross-Validation,42,Fixed,Standard seed.
+CalibratedClassifierCV inner folds,Cross-Validation,"5 (train), 3 (eval)",Fixed,Inconsistent inner CV for Platt Scaling.
+Text Imputation,Preprocessing,Empty String (''),Fixed,NaNs filled with blank strings before TF-IDF.
+TF-IDF max_features,TF-IDF,1000,Explicit,Caps vocabulary. High impact on text signal.
+TF-IDF min_df,TF-IDF,5,Explicit,Removes extremely rare words.
+TF-IDF ngram_range,TF-IDF,"(1, 2)",Explicit,Unigrams and bigrams used.
+TF-IDF sublinear_tf,TF-IDF,True,Explicit,Logarithmic term frequency scaling.
+TF-IDF stop_words,TF-IDF,None,Default,No stop word filtering applied.
+Categorical Encoder,Features,OneHotEncoder,Explicit,"One-hot applied to plaintiff_type, defendant_type, court_type, etc."
+OHE handle_unknown,Features,'ignore',Explicit,Prevents crashes on unseen categories.
+Appellate Encoder,Features,pd.get_dummies,Explicit,Deviates from doc claiming STE M=5.
+Numerical Imputation (Claim),Features,Median Claim,Explicit,Replaces missing claims with median.
+Numerical Transformation,Features,np.log1p,Explicit,Applied to claim amounts and text lengths.
+Claim Amount Bucket,Features,"[-inf, 1M, 10M, inf]",Explicit,Discretizes claim amounts into low/medium/high.
+Appellate Scaling,Features,StandardScaler(with_mean=False),Explicit,Applied to dummy variables! Skews Odds Ratios.
+Regex Signal count,Features,13,Explicit,Hand-engineered boolean features.
+RF n_estimators,Random Forest,300,Explicit,Only used for comparison in phase 2.
+RF class_weight,Random Forest,'balanced',Explicit,Adjusts for class imbalance.
+LR max_iter,Logistic Regression,2000,Explicit,High max_iter to ensure convergence.
+LR class_weight,Logistic Regression,'balanced',Explicit,Handles imbalance.
+LR penalty,Logistic Regression,l2,Default,Default L2 regularization.
+LR C,Logistic Regression,1.0,Default,Default regularization strength.
+HistGBM max_iter,HistGradientBoosting,500,Explicit,Maximum number of trees.
+HistGBM learning_rate,HistGradientBoosting,0.05,Explicit,Shrinkage parameter.
+HistGBM max_depth,HistGradientBoosting,6,Explicit,Limits tree depth.
+HistGBM class_weight,HistGradientBoosting,'balanced',Explicit,Crucial for predicting minority classes.
+HistGBM l2_regularization,HistGradientBoosting,0.0,Default,No L2 penalty applied explicitly.
+HistGBM min_samples_leaf,HistGradientBoosting,20,Default,Default leaf minimum.
+Calibration Method,Calibration,'sigmoid',Explicit,Platt Scaling used instead of isotonic.
+Precision Thresholds,Prediction,"denied=0.5, partial=0.4, etc.",Explicit,Hardcoded thresholds for final prediction assignment.
+Confidence Margin Threshold,Prediction,0.20,Explicit,Margin between top 2 classes for high confidence.
+Signal Boosts,Prediction,"settled=1.5, granted=1.3, etc.",Explicit,Heuristic posterior probability multipliers applied after model prediction!
+Primary Metric,Evaluation,macro-F1,Fixed,Main evaluation metric.

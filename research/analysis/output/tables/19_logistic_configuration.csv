@@ -1,0 +1,12 @@
+parameter,value
+model,LogisticRegression
+class_weight,balanced
+input_transformations,StandardScaler() on all inputs
+target_encoding_configuration,"NONE (Methodology claims M=5 target encoding, but implementation uses One-Hot Encoding)"
+categorical_encoding_actual,pd.get_dummies(drop_first=True)
+CV_configuration,"StratifiedKFold(n_splits=5, shuffle=True, random_state=42)"
+regularization_penalty,l2
+C,1.0
+solver,lbfgs (default)
+max_iter,100 (default)
+random_state,42
