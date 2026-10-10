@@ -1,0 +1,26 @@
+component,model,parameter,value,description,calibration_method
+TF-IDF,TfidfVectorizer,max_features,1000,"Vocabulary size upper bound from petition text",-
+TF-IDF,TfidfVectorizer,ngram_range,"(1, 2)","Unigrams and bigrams extracted",-
+TF-IDF,TfidfVectorizer,sublinear_tf,True,"Sublinear log term frequency scaling",-
+TF-IDF,TfidfVectorizer,min_df,5,"Ignore terms appearing in less than 5 cases",-
+Cross-Validation,StratifiedKFold,n_splits,5,"5-fold stratified cross validation (80/20 train/test)",-
+Cross-Validation,StratifiedKFold,shuffle,True,"Random shuffling with seed 42",-
+Baseline Model,DummyClassifier,strategy,most_frequent,"Always predicts majority class ('granted')",None
+Linear Model,LogisticRegression,penalty,l2,"L2 Ridge regularization",None
+Linear Model,LogisticRegression,C,1.0,"Inverse regularization strength",None
+Linear Model,LogisticRegression,max_iter,2000,"Maximum solver iterations",None
+Linear Model,LogisticRegression,class_weight,balanced,"Inverse-frequency class weighting",None
+Random Forest,RandomForestClassifier,n_estimators,300,"Number of decision trees in forest",None
+Random Forest,RandomForestClassifier,max_depth,None,"Unlimited tree depth",None
+Random Forest,RandomForestClassifier,class_weight,balanced,"Balanced class weights",None
+HistGradientBoosting,HistGradientBoostingClassifier,learning_rate,0.05,"Gradient boosting shrinkage parameter",CalibratedClassifierCV(method='sigmoid', cv=5)
+HistGradientBoosting,HistGradientBoostingClassifier,max_depth,6,"Maximum tree depth limit",CalibratedClassifierCV(method='sigmoid', cv=5)
+HistGradientBoosting,HistGradientBoostingClassifier,max_iter,500,"Maximum number of boosting iterations",CalibratedClassifierCV(method='sigmoid', cv=5)
+HistGradientBoosting,HistGradientBoostingClassifier,min_samples_leaf,20,"Minimum samples per leaf",CalibratedClassifierCV(method='sigmoid', cv=5)
+HistGradientBoosting,HistGradientBoostingClassifier,class_weight,balanced,"Balanced class weighting",CalibratedClassifierCV(method='sigmoid', cv=5)
+Calibration,CalibratedClassifierCV,method,sigmoid,"Platt scaling calibration for reliable posteriors",sigmoid
+Calibration,CalibratedClassifierCV,cv,"3 (eval) / 5 (train)","Inner cross-validation folds for calibration regressor",sigmoid
+Decision Rules,PostProcessor,confidence_margin,0.20,"Top 1 vs Top 2 probability difference threshold",-
+Decision Rules,PostProcessor,precision_thresholds,"denied=0.50, partial=0.40, uncontested=0.40, withdrawn=0.35","Class-specific precision threshold overrides",-
+Appellate Model,LogisticRegression,case_scope,"appellate + supervisory","Binary outcome prediction: upheld (1) vs overturned (0)",None
+Appellate Model,LogisticRegression,transformation,"log1p + get_dummies","Log transform of claim amounts and dummy categorical encoding",None

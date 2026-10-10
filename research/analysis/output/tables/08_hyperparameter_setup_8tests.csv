@@ -1,0 +1,9 @@
+test_id,group,model,vocab_size,learning_rate,max_depth,n_estimators_or_iter,class_weight,calibration_method,inner_cal_folds,decision_threshold_or_margin,target_task
+1,Baseline,Majority Classifier,-,-,-,-,None,None,-,Argmax (granted),6-class First Instance
+2,Linear Model,Logistic Regression,1000,-,-,2000,balanced,None,-,Argmax,6-class First Instance
+3,Tree Ensemble,Random Forest,1000,-,None (unlimited),300,balanced,None,-,Argmax,6-class First Instance
+4,Gradient Boosting,HistGBM (Uncalibrated),1000,0.05,6,500,balanced,None,-,Argmax,6-class First Instance
+5,Calibration (Eval),HistGBM (Sigmoid-3),1000,0.05,6,500,balanced,sigmoid (Platt),3,Argmax,6-class First Instance
+6,Production Model,HistGBM (Sigmoid-5),1000,0.05,6,500,balanced,sigmoid (Platt),5,Argmax,6-class First Instance
+7,Post-Processing,HistGBM Calibrated + Rules,1000,0.05,6,500,balanced,sigmoid (Platt),5,"margin>=0.20, denied>=0.50, partial>=0.40",6-class First Instance
+8,Appellate Model,Logistic Regression (Binary),-,-,-,2000,balanced,None,-,p>=0.50 (Supervised/Appellate),Binary Upheld

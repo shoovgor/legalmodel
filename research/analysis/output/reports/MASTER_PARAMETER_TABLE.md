@@ -79,3 +79,16 @@ These parameters strongly govern the model's behavior and represent the primary 
 - **Appellate Target Encoding**: Documentation states `Smoothed Target Encoding M=5`, but implementation uses `pd.get_dummies`.
 - **Heuristic Signal Boosts**: The `prediction_model.py` script applies arbitrary heuristic multipliers (e.g., `has_settlement` * 1.5) to the `CalibratedClassifierCV` posterior probabilities *after* prediction, destroying calibration.
 - **Hardcoded Precision Thresholds**: Final classifications are overridden by arbitrary probability thresholds in `predict_case`.
+
+## Publication 8-Tests Hyperparameter Setup Table
+
+| Test # | Group / Model | Vocab ($V$) | Learning Rate ($\eta$) | Max Depth ($d$) | Trees / Iter ($N$) | Class Weight ($\mathcal{W}$) | Calibration ($\mathcal{C}$) | Inner $k_{cal}$ | Decision / Post-processing Rule |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **1** | **Naive Baseline** | — | — | — | — | None | None | — | Majority class: `granted` |
+| **2** | **Logistic Regression** | 1,000 | — | — | 2,000 | balanced | None | — | $L_2$ penalty, $C=1.0$, `StandardScaler` |
+| **3** | **Random Forest** | 1,000 | — | None | 300 | balanced | None | — | Standard bagging ensemble |
+| **4** | **HistGBM (Uncalibrated)** | 1,000 | 0.05 | 6 | 500 | balanced | **None (Raw)** | — | Raw gradient boosting logit outputs |
+| **5** | **HistGBM + Sigmoid ($k=3$)** | 1,000 | 0.05 | 6 | 500 | balanced | **Sigmoid** | **3** | Platt scaling (CV evaluation model) |
+| **6** | **HistGBM + Sigmoid ($k=5$)** | 1,000 | 0.05 | 6 | 500 | balanced | **Sigmoid** | **5** | **Final production classifier** |
+| **7** | **HistGBM Calibrated + Rules**| 1,000 | 0.05 | 6 | 500 | balanced | **Sigmoid** | **5** | Margin $\ge 0.20$, $\max(p) \ge 0.50$, per-class cutoffs |
+| **8** | **Appellate Logistic Reg** | — | — | — | 2,000 | balanced | None | — | Binary prediction: Upheld (1) vs Other (0) |

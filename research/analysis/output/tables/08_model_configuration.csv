@@ -1,5 +1,0 @@
-model,parameter,value,preprocessing,feature_representation,calibration_method
-HistGradientBoostingClassifier,max_iter,500,TF-IDF + OneHotEncoding + Passthrough,"1000 TF-IDF max, median impute",CalibratedClassifierCV(method='sigmoid')
-HistGradientBoostingClassifier,learning_rate,0.05,TF-IDF + OneHotEncoding + Passthrough,"1000 TF-IDF max, median impute",CalibratedClassifierCV(method='sigmoid')
-HistGradientBoostingClassifier,max_depth,6,TF-IDF + OneHotEncoding + Passthrough,"1000 TF-IDF max, median impute",CalibratedClassifierCV(method='sigmoid')
-HistGradientBoostingClassifier,class_weight,balanced,TF-IDF + OneHotEncoding + Passthrough,"1000 TF-IDF max, median impute",CalibratedClassifierCV(method='sigmoid')
